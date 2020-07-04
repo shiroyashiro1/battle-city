@@ -1,10 +1,8 @@
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-	cout << "\nWorking!\n";
-	cin.get();
+	std::cout << "\nWorking!\n";
+	std::cin.get();
 	return 0;
 }
