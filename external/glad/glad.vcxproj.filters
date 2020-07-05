@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\shiro\rep\stPr\battle-city\external\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\shiro\rep\stPr\battle-city\external\glad\include\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\shiro\rep\stPr\battle-city\external\glad\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5629B9D3-608B-3CC8-8E8D-A8348C78FFDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2CBCAAD5-40DC-3114-9E44-FB72633193D6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

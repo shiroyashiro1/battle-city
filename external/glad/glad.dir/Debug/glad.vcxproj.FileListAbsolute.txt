@@ -1,0 +1,2 @@
+C:\Users\shiro\rep\stPr\battle-city\external\glad\Debug\glad.pdb
+C:\Users\shiro\rep\stPr\battle-city\external\glad\glad.dir\Debug\glad.pdb

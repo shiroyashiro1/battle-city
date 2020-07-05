@@ -1,0 +1,3 @@
+C:/Users/shiro/rep/stPr/battle-city/external/glad/CMakeFiles/glad.dir
+C:/Users/shiro/rep/stPr/battle-city/external/glad/CMakeFiles/ALL_BUILD.dir
+C:/Users/shiro/rep/stPr/battle-city/external/glad/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,10 @@
+^C:\USERS\SHIRO\REP\STPR\BATTLE-CITY\EXTERNAL\GLAD\CMAKEFILES\4C26CDF35B26DDC89246572C2B27C949\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shiro/rep/stPr/battle-city/external/glad -BC:/Users/shiro/rep/stPr/battle-city/external/glad --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/shiro/rep/stPr/battle-city/external/glad/Glad.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
