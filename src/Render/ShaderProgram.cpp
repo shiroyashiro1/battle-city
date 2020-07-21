@@ -1,5 +1,4 @@
 #include "ShaderProgram.h"
-#include <iostream>
 
 namespace Renderer
 {
@@ -9,14 +8,14 @@ namespace Renderer
 		GLuint vertexShaderID;
 		if (!createShader(vertexShader, GL_VERTEX_SHADER, vertexShaderID))
 		{
-			std::cerr << "\nVertex Shader Compile Time Error\n";
+			std::cerr << "\nFILE ShaderProgram.cpp | Vertex Shader Compile Time Error\n";
 			return;
 		}
 
 		GLuint fragmentShaderID;
 		if (!createShader(fragmentShader, GL_FRAGMENT_SHADER, fragmentShaderID))
 		{
-			std::cerr << "\nVertex Shader Compile Time Error\n";
+			std::cerr << "\nFILE ShaderProgram.cpp | Vertex Shader Compile Time Error\n";
 			glDeleteShader(vertexShaderID);
 			return;
 		}
@@ -32,7 +31,7 @@ namespace Renderer
 		{
 			GLchar infoLog[1024];
 			glGetShaderInfoLog(m_ID, 1024, nullptr, infoLog);
-			std::cerr << "\nShader Error: Link Time Error:\n\n" <<
+			std::cerr << "\nFILE ShaderProgram.cpp | Shader Error: Link Time Error:\n\n" <<
 				infoLog << "\n\n";
 
 			std::cin.get();
@@ -65,7 +64,7 @@ namespace Renderer
 		{
 			GLchar infoLog[1024];
 			glGetShaderInfoLog(shaderID, 1024, nullptr, infoLog);
-			std::cerr << "Shader Error: Compile Time Error:\n\n" <<
+			std::cerr << "FILE ShaderProgram.cpp | Shader Error: Compile Time Error:\n\n" <<
 				infoLog << "\n\n";
 
 			std::cin.get();
