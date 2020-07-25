@@ -18,6 +18,7 @@ namespace Renderer
 			const std::string& fragmentShader);
 		ShaderProgram& operator=(ShaderProgram&& shaderProgram) noexcept;
 		ShaderProgram(ShaderProgram&& shaderProgram) noexcept;
+		void setInt(const std::string& name, const GLint value);
 
 		~ShaderProgram();
 

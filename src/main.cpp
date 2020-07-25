@@ -1,8 +1,12 @@
 #include "Render/ShaderProgram.h"
 #include "Resources/ResourceManager.h"
-#include <GLFW/glfw3.h>
+#include "Render/Texture2D.h"
+
 #include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
+
+/* Coordinates & colors for triangle */
 
 GLfloat points[] =
 {
@@ -17,6 +21,16 @@ GLfloat colors[] =
     0.0f, 1.0f, 0.0f,
     0.0f, 0.0f, 1.0f
 };
+
+/* Coordinates for texture to triangle */
+
+GLfloat texCoord[] =
+{
+    0.5f, 1.0f,
+    1.0f, 0.0f,
+    0.0f, 0.0f
+};
+
 /*
 const char* vertex_shader =
 "#version 460\n"
@@ -62,6 +76,7 @@ int main(int argc, char** argv)
     if (!glfwInit())
     {
         std::cout << "\nFILE main.cpp | Error Init! : glfwInit failed!\n";
+        std::cin.get();
         return -1;
     }
 
@@ -71,6 +86,7 @@ int main(int argc, char** argv)
     {
         std::cout << "\nFILE main.cpp | Error pWindow! : glfwCreateWindow failed!\n";
         glfwTerminate();
+        std::cin.get();
         return -1;
     }
 
@@ -84,6 +100,7 @@ int main(int argc, char** argv)
     if (!gladLoadGL())
     {
         std::cout << "\nFILE main.cpp | Cannot load GLAD\n";
+        std::cin.get();
         return -1;
     }
 
@@ -132,19 +149,14 @@ int main(int argc, char** argv)
         if (!pDefaultShaderProgram)
         {
             std::cerr << "\nFILE main.cpp | Can't create shader program\n";
+            std::cin.get();
             return -1;
         }
 
-        /* By class ShaderProgram */
-
-        std::string vertexShader;//(vertex_shader);
-        std::string fragmentShader;//(fragment_shader);
-
-        Renderer::ShaderProgram shaderProgram(vertexShader, fragmentShader);
-
-        if (!shaderProgram.isCompiled())
+        auto tex = resourceManager.loadTexture("DefaultTexture", "res/textures/map_16x16.png");
+        if (!tex)
         {
-            std::cerr << "\nFILE main.cpp | Can not create shader program\n";
+            std::cerr << "\nFILE main.cpp | Can't create pTexture\n";
             std::cin.get();
             return -1;
         }
@@ -153,7 +165,7 @@ int main(int argc, char** argv)
            POSITIONS AND COLORS OUR VERTEX
            (VBO) */
 
-           /* Generating id */
+        /* Generating id */
         GLuint points_vbo = 0; // - id
         glGenBuffers(1, &points_vbo); // - generating
         /* Binding the generated array */
@@ -171,17 +183,24 @@ int main(int argc, char** argv)
         /* Content our buffer for current (colors_vbo)*/
         glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
 
+        /* For texture */
+
+        GLuint texCoord_vbo = 0;
+        glGenBuffers(1, &texCoord_vbo);
+        glBindBuffer(GL_ARRAY_BUFFER, texCoord_vbo);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(texCoord), texCoord, GL_STATIC_DRAW);
+
         /* THAT WHAT HAVE TO DO VIDEO-CARD
            WITH SHADERS INFO IN ITSELF MEMORY
            (VAO) */
 
-           /* Generating id */
+        /* Generating id */
         GLuint vao = 0; // - id
         glGenVertexArrays(1, &vao); // - generating
         /* Binding the generated array */
         glBindVertexArray(vao);
 
-        /* Swith on position points and colors */
+        /* Swith on position points and colors (buffers) */
 
         glEnableVertexAttribArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, points_vbo);
@@ -190,30 +209,19 @@ int main(int argc, char** argv)
         glEnableVertexAttribArray(1);
         glBindBuffer(GL_ARRAY_BUFFER, colors_vbo);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
-        /*
-            GLuint points_vbo = 0;
-            glGenBuffers(1, &points_vbo);
-            glBindBuffer(GL_ARRAY_BUFFER, points_vbo);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
+        
+        /* Buffer for texutre */
 
-            GLuint colors_vbo = 0;
-            glGenBuffers(1, &colors_vbo);
-            glBindBuffer(GL_ARRAY_BUFFER, colors_vbo);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
+        glEnableVertexAttribArray(2);
+        glBindBuffer(GL_ARRAY_BUFFER, texCoord_vbo);
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
 
-            GLuint vao = 0;
-            glGenVertexArrays(1, &vao);
-            glBindVertexArray(vao);
+        /* Activate shader program */
+        pDefaultShaderProgram->use();
+        /* Set uniform for texture */
+        pDefaultShaderProgram->setInt("tex", 0);
 
-            glEnableVertexAttribArray(0);
-            glBindBuffer(GL_ARRAY_BUFFER, points_vbo);
-            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
-
-            glEnableVertexAttribArray(1);
-            glBindBuffer(GL_ARRAY_BUFFER, colors_vbo);
-            glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);*/
-
-            /* Loop until the user closes the window */
+        /* Loop until the user closes the window */
         while (!glfwWindowShouldClose(pWindow))
         {
             /* Render here */
@@ -225,6 +233,10 @@ int main(int argc, char** argv)
             pDefaultShaderProgram->use();
             /* Connect our vertex array object */
             glBindVertexArray(vao);
+
+            /* Activate our texture */
+            tex->bind();
+
             /* The command what draw a current binded vao */
             glDrawArrays(GL_TRIANGLES, 0, 3);
 
@@ -234,11 +246,16 @@ int main(int argc, char** argv)
             /* Poll for and process events */
             glfwPollEvents();
         }
+        /*std::cout << "\nExit for block while\n";
+        std::cin.get();*/
     }
+
+    /*std::cout << "\nTerminate";
+    std::cin.get();*/
 
     glfwTerminate();
 
-    std::cout << "\nPress any ...\n";
+    std::cout << "\nPress any keyboard ...\n";
     std::cin.get();
 
     return 0;

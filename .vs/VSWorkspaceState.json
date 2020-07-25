@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\res\\shaders",
+    "\\res\\textures",
     "\\src",
     "\\src\\Render",
     "\\src\\Resources"
