@@ -1,18 +1,24 @@
-#include "Render/ShaderProgram.h"
 #include "Resources/ResourceManager.h"
+#include "Render/ShaderProgram.h"
 #include "Render/Texture2D.h"
+#include "Render/Sprite.h"
+
+#include <glm/vec2.hpp>
+#include <glm/mat4x4.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
 #include <iostream>
 
 /* Coordinates & colors for triangle */
 
 GLfloat points[] =
 {
-    0.0f,  0.5f, 0.0f,
-   -0.5f, -0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f
+    0.0f,  50.f, 0.0f,
+   -50.f, -50.f, 0.0f,
+    50.f, -50.f, 0.0f
 };
 
 GLfloat colors[] = 
@@ -50,14 +56,17 @@ const char* fragment_shader =
 "    fragment_color = vec4(color, 1.0);"
 "}";
 */
+
 int window_width = 480;
 int window_height = 480;
 
+glm::ivec2 g_windowSize(window_width, window_height);
+
 void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height)
 {
-    window_width = width;
-    window_height = height;
-    glViewport(0, 0, window_width, window_height);
+    g_windowSize.x = width;
+    g_windowSize.y = height;
+    glViewport(0, 0, g_windowSize.x, g_windowSize.y);
 }
 
 void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int mode)
@@ -81,7 +90,7 @@ int main(int argc, char** argv)
     }
 
     /* Create a windowed mode window and its OpenGL context */
-    pWindow = glfwCreateWindow(window_width, window_height, "BattleCity", nullptr, nullptr);
+    pWindow = glfwCreateWindow(g_windowSize.x, g_windowSize.y, "BattleCity", nullptr, nullptr);
     if (!pWindow)
     {
         std::cout << "\nFILE main.cpp | Error pWindow! : glfwCreateWindow failed!\n";
@@ -153,6 +162,15 @@ int main(int argc, char** argv)
             return -1;
         }
 
+        auto pSpriteShaderProgram = resourceManager.loadShader("SpriteShader",
+            "res/shaders/vSprite.txt", "res/shaders/fSprite.txt");
+        if (!pSpriteShaderProgram)
+        {
+            std::cerr << "\nFILE main.cpp | Can't create sprite shader program\n";
+            std::cin.get();
+            return -1;
+        }
+
         auto tex = resourceManager.loadTexture("DefaultTexture", "res/textures/map_16x16.png");
         if (!tex)
         {
@@ -160,6 +178,11 @@ int main(int argc, char** argv)
             std::cin.get();
             return -1;
         }
+
+        auto pSprite = resourceManager.loadSprite(
+            "NewSprite", "DefaultTexture", "SpriteShader", 100, 100);
+
+        pSprite->setPostion(glm::vec2(300, 100));
 
         /* SEND TO VIDEO-CARD MEMORY SHADERS INFO ABOUT
            POSITIONS AND COLORS OUR VERTEX
@@ -221,6 +244,33 @@ int main(int argc, char** argv)
         /* Set uniform for texture */
         pDefaultShaderProgram->setInt("tex", 0);
 
+        /* WORKING WITH TRANSFORMATION MATRIX 
+           (GLM) */
+
+        // MODEL MATRIX
+
+        // Creating a identity model matrix
+        glm::mat4 modelMatrix = glm::mat4(1.f);
+        // Translating our triangle
+        modelMatrix = glm::translate(modelMatrix, glm::vec3(240.f, 50.f, 0.0f));
+        // Now we in "World Space"
+
+        // PROJECTION MATRIX
+
+        // Creating our frustum
+        glm::mat4 projMatrix = glm::ortho(0.0f, static_cast<float>(g_windowSize.x), 
+                                          0.0f, static_cast<float>(g_windowSize.y),
+                                         -10.f, 50.f);
+        // Now we in "Clip Space"
+
+        /* TRANSFER OF MATRIX TO SHADER */
+
+        pDefaultShaderProgram->setMatrix4("projMatrix", projMatrix);
+
+        pSpriteShaderProgram->use();
+        pSpriteShaderProgram->setInt("tex", 0);
+        pSpriteShaderProgram->setMatrix4("projMatrix", projMatrix);
+
         /* Loop until the user closes the window */
         while (!glfwWindowShouldClose(pWindow))
         {
@@ -237,8 +287,12 @@ int main(int argc, char** argv)
             /* Activate our texture */
             tex->bind();
 
+            // Transfering our triangle
+            pDefaultShaderProgram->setMatrix4("modelMatrix", modelMatrix);
             /* The command what draw a current binded vao */
             glDrawArrays(GL_TRIANGLES, 0, 3);
+
+            pSprite->render();
 
             /* Swap front and back buffers */
             glfwSwapBuffers(pWindow);

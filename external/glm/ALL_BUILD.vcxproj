@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72516BAE-4D4C-3812-B9A6-234F8B21524A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shiro/rep/stPr/battle-city/external/glm -BC:/Users/shiro/rep/stPr/battle-city/external/glm --check-stamp-file C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.17\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeCXXCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeRCCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shiro/rep/stPr/battle-city/external/glm -BC:/Users/shiro/rep/stPr/battle-city/external/glm --check-stamp-file C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.17\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeCXXCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeRCCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shiro/rep/stPr/battle-city/external/glm -BC:/Users/shiro/rep/stPr/battle-city/external/glm --check-stamp-file C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.17\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeCXXCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeRCCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shiro/rep/stPr/battle-city/external/glm -BC:/Users/shiro/rep/stPr/battle-city/external/glm --check-stamp-file C:/Users/shiro/rep/stPr/battle-city/external/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.17\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeCXXCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeRCCompiler.cmake;C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\3.17.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\shiro\rep\stPr\battle-city\external\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\ZERO_CHECK.vcxproj">
+      <Project>{32497E3D-2B52-3A41-A23C-6E6B35BAB516}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\bug\test-bug_ms_vec_static.vcxproj">
+      <Project>{D5CCD134-8031-3859-93F7-519278074CB7}</Project>
+      <Name>test-bug_ms_vec_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_cpp_constexpr.vcxproj">
+      <Project>{D7A4A432-F065-3501-9D7D-BE072FBE55DE}</Project>
+      <Name>test-core_cpp_constexpr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_cpp_defaulted_ctor.vcxproj">
+      <Project>{4850F635-155D-385A-BC49-101964E1129A}</Project>
+      <Name>test-core_cpp_defaulted_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_aligned_gentypes.vcxproj">
+      <Project>{255A170D-5E4D-35BF-BBBC-D9E01941D681}</Project>
+      <Name>test-core_force_aligned_gentypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_arch_unknown.vcxproj">
+      <Project>{36D9EEE5-27AC-3582-A71B-A70BA0134DBD}</Project>
+      <Name>test-core_force_arch_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_compiler_unknown.vcxproj">
+      <Project>{C6EC2738-4ECA-3D29-9FD4-30C1273A7128}</Project>
+      <Name>test-core_force_compiler_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_ctor_init.vcxproj">
+      <Project>{F71D60D1-E444-3148-9871-5D2E2F221281}</Project>
+      <Name>test-core_force_ctor_init</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_cxx03.vcxproj">
+      <Project>{82797860-5E5C-30DB-99F6-1FE16D79A5F5}</Project>
+      <Name>test-core_force_cxx03</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_cxx98.vcxproj">
+      <Project>{33037333-CE5C-3227-A065-4110B1F75746}</Project>
+      <Name>test-core_force_cxx98</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_cxx_unknown.vcxproj">
+      <Project>{DB96BB33-21C9-3B8C-BB6D-758EDAE89975}</Project>
+      <Name>test-core_force_cxx_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_explicit_ctor.vcxproj">
+      <Project>{AC8C288D-4C52-392B-A09E-468A025DCC9E}</Project>
+      <Name>test-core_force_explicit_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_inline.vcxproj">
+      <Project>{A0405CC5-16BE-362E-AFC1-FECF6C2F9D00}</Project>
+      <Name>test-core_force_inline</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_platform_unknown.vcxproj">
+      <Project>{E0749104-E943-3B4B-A1A1-78A2506DE08A}</Project>
+      <Name>test-core_force_platform_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_pure.vcxproj">
+      <Project>{6BA1A8AA-3663-3049-86F2-6ED26CE63370}</Project>
+      <Name>test-core_force_pure</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_quat_wxyz.vcxproj">
+      <Project>{EBA277B8-2E21-3367-A212-3890BF6E7AF2}</Project>
+      <Name>test-core_force_quat_wxyz</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_unrestricted_gentype.vcxproj">
+      <Project>{0571087B-2A4B-324A-B8CD-C48AB6F8EABB}</Project>
+      <Name>test-core_force_unrestricted_gentype</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_force_xyzw_only.vcxproj">
+      <Project>{29C099D5-A3A7-3B41-A160-8672E4C3E8BE}</Project>
+      <Name>test-core_force_xyzw_only</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_common.vcxproj">
+      <Project>{5CA5B6D9-3E05-3D48-BB98-326C282FB96C}</Project>
+      <Name>test-core_func_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_exponential.vcxproj">
+      <Project>{729B723A-8E7D-3CB9-BE68-DB517239D520}</Project>
+      <Name>test-core_func_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_geometric.vcxproj">
+      <Project>{29C919EC-1BF8-3979-96A3-AAC18DFF6951}</Project>
+      <Name>test-core_func_geometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_integer.vcxproj">
+      <Project>{BF67955F-4BB7-37CA-9452-F2037B6AC821}</Project>
+      <Name>test-core_func_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_integer_bit_count.vcxproj">
+      <Project>{AB11303F-0B34-3B9C-9297-9D7576D35CE9}</Project>
+      <Name>test-core_func_integer_bit_count</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_integer_find_lsb.vcxproj">
+      <Project>{83BDFDF0-3314-3ABB-B31B-CC7E98AEE4F5}</Project>
+      <Name>test-core_func_integer_find_lsb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_integer_find_msb.vcxproj">
+      <Project>{D60235A7-6DD1-3015-9757-68CADEBDAF86}</Project>
+      <Name>test-core_func_integer_find_msb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_matrix.vcxproj">
+      <Project>{8D31BA55-7B6A-3344-BF98-BFCC06C17C28}</Project>
+      <Name>test-core_func_matrix</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_noise.vcxproj">
+      <Project>{361580C0-76EC-3F08-9A11-06B9DFB22FFF}</Project>
+      <Name>test-core_func_noise</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_packing.vcxproj">
+      <Project>{45C1F529-2208-30A0-830D-99A86233FB33}</Project>
+      <Name>test-core_func_packing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_swizzle.vcxproj">
+      <Project>{C7808250-D8A6-3C5E-A2B7-3351ACC005AB}</Project>
+      <Name>test-core_func_swizzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_trigonometric.vcxproj">
+      <Project>{91805D3B-655D-3FF6-90A5-B0A76C9F2930}</Project>
+      <Name>test-core_func_trigonometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_func_vector_relational.vcxproj">
+      <Project>{57A9FDE5-B035-3D96-8B87-DF6FB471C64A}</Project>
+      <Name>test-core_func_vector_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_setup_force_cxx98.vcxproj">
+      <Project>{E256C281-9A16-3193-A564-EC4D99B35294}</Project>
+      <Name>test-core_setup_force_cxx98</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_setup_force_size_t_length.vcxproj">
+      <Project>{98979A0A-97F0-335A-956E-EF0941AE4B57}</Project>
+      <Name>test-core_setup_force_size_t_length</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_setup_message.vcxproj">
+      <Project>{43AED531-6768-3C83-8A7A-24963E583F25}</Project>
+      <Name>test-core_setup_message</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_setup_platform_unknown.vcxproj">
+      <Project>{C0B0E16A-03CC-3F7A-A624-118410B0361B}</Project>
+      <Name>test-core_setup_platform_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_setup_precision.vcxproj">
+      <Project>{88EE941F-1585-38E4-88B3-6DD66BFB027C}</Project>
+      <Name>test-core_setup_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_aligned.vcxproj">
+      <Project>{BB42F169-6E2F-3F37-9039-DECB3B1521FF}</Project>
+      <Name>test-core_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_cast.vcxproj">
+      <Project>{08B218F7-B6CE-376D-906D-C3C22E073A38}</Project>
+      <Name>test-core_type_cast</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_ctor.vcxproj">
+      <Project>{9B3E78BD-FBBF-37B8-AFAE-0D281CD806BB}</Project>
+      <Name>test-core_type_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_int.vcxproj">
+      <Project>{71C305AA-8A33-3794-A85A-A2313D5CB7E8}</Project>
+      <Name>test-core_type_int</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_length.vcxproj">
+      <Project>{755DB881-32B2-3298-9A0A-25310C6098C4}</Project>
+      <Name>test-core_type_length</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat2x2.vcxproj">
+      <Project>{36E4F76C-2280-3E34-90D7-68120E1BCFF5}</Project>
+      <Name>test-core_type_mat2x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat2x3.vcxproj">
+      <Project>{EF4B4CC8-E36E-3828-824A-4C27A071A02F}</Project>
+      <Name>test-core_type_mat2x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat2x4.vcxproj">
+      <Project>{908E09BA-55FC-346B-B452-F2BD36AEEA69}</Project>
+      <Name>test-core_type_mat2x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat3x2.vcxproj">
+      <Project>{4393F3ED-B7EF-3B81-A6CF-2571DA2194A0}</Project>
+      <Name>test-core_type_mat3x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat3x3.vcxproj">
+      <Project>{A1BC12EF-2048-3548-B868-6FDEEBB71410}</Project>
+      <Name>test-core_type_mat3x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat3x4.vcxproj">
+      <Project>{AC909337-599E-3096-A9CA-18D25690D744}</Project>
+      <Name>test-core_type_mat3x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat4x2.vcxproj">
+      <Project>{B5BF0328-959E-3C28-A32F-EEBA0951350D}</Project>
+      <Name>test-core_type_mat4x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat4x3.vcxproj">
+      <Project>{2903F73C-08E3-38C7-8333-A1582D7D0D3D}</Project>
+      <Name>test-core_type_mat4x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_mat4x4.vcxproj">
+      <Project>{087A6917-D9B5-3B0E-B878-3B59DCC77864}</Project>
+      <Name>test-core_type_mat4x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_vec1.vcxproj">
+      <Project>{9DE392A5-5FA9-3C88-9A61-8E63E925698A}</Project>
+      <Name>test-core_type_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_vec2.vcxproj">
+      <Project>{DDF04615-E4EE-384E-9CF4-132D12F393E2}</Project>
+      <Name>test-core_type_vec2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_vec3.vcxproj">
+      <Project>{3FBBF28B-4095-3788-A1A1-D8D19F5D6A59}</Project>
+      <Name>test-core_type_vec3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\core\test-core_type_vec4.vcxproj">
+      <Project>{857ED424-6592-3BA2-A140-D0162F0B4527}</Project>
+      <Name>test-core_type_vec4</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_common.vcxproj">
+      <Project>{0D6A5620-B92D-30B2-958D-64BCB6BF6BE8}</Project>
+      <Name>test-ext_matrix_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int2x2_sized.vcxproj">
+      <Project>{A9E2B136-BCFA-3004-AE00-2518ED137C3F}</Project>
+      <Name>test-ext_matrix_int2x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int2x3_sized.vcxproj">
+      <Project>{F381391E-5703-3AB9-9EB2-429FF9A04618}</Project>
+      <Name>test-ext_matrix_int2x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int2x4_sized.vcxproj">
+      <Project>{23ECF90E-AFC6-3A3F-AB79-1539FA20CDEC}</Project>
+      <Name>test-ext_matrix_int2x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int3x2_sized.vcxproj">
+      <Project>{1F6C3B52-A460-39D9-8D0E-E967E4DB9544}</Project>
+      <Name>test-ext_matrix_int3x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int3x3_sized.vcxproj">
+      <Project>{0AC85179-628F-3ACA-A19D-8CEC982AB2EC}</Project>
+      <Name>test-ext_matrix_int3x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int3x4_sized.vcxproj">
+      <Project>{9DA80A14-C111-301D-BCA7-D7C959D92FEE}</Project>
+      <Name>test-ext_matrix_int3x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int4x2_sized.vcxproj">
+      <Project>{4334D0B5-42A4-3C7C-9D49-2A46DF861F66}</Project>
+      <Name>test-ext_matrix_int4x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int4x3_sized.vcxproj">
+      <Project>{10B8C2F8-CBAE-3462-A903-D3B88F044BD6}</Project>
+      <Name>test-ext_matrix_int4x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_int4x4_sized.vcxproj">
+      <Project>{85658E71-DAE9-3CA7-B0D2-A0C98BE3544C}</Project>
+      <Name>test-ext_matrix_int4x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_relational.vcxproj">
+      <Project>{7CBE9102-DDBD-3F9F-8F7E-9D8189DDB2A0}</Project>
+      <Name>test-ext_matrix_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_transform.vcxproj">
+      <Project>{9AD96D6A-A343-3258-A24A-7D641C500D1F}</Project>
+      <Name>test-ext_matrix_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint2x2_sized.vcxproj">
+      <Project>{4CBA3791-2DAC-3547-9F5E-FD7F6E6CFED5}</Project>
+      <Name>test-ext_matrix_uint2x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint2x3_sized.vcxproj">
+      <Project>{0A9DB855-B491-349C-A9D1-49AAFA349F79}</Project>
+      <Name>test-ext_matrix_uint2x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint2x4_sized.vcxproj">
+      <Project>{3D0E3AE1-9D84-3B74-910A-ECF2063BA399}</Project>
+      <Name>test-ext_matrix_uint2x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint3x2_sized.vcxproj">
+      <Project>{D306CA7D-5567-3749-9C4C-99F64518F452}</Project>
+      <Name>test-ext_matrix_uint3x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint3x3_sized.vcxproj">
+      <Project>{2D439BE0-47C6-3C93-914F-F4474F550E31}</Project>
+      <Name>test-ext_matrix_uint3x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint3x4_sized.vcxproj">
+      <Project>{B31A2B86-BDC6-35BF-9222-DF430B355911}</Project>
+      <Name>test-ext_matrix_uint3x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint4x2_sized.vcxproj">
+      <Project>{31E4CF2E-CF8D-3478-A547-F30BDE231C33}</Project>
+      <Name>test-ext_matrix_uint4x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint4x3_sized.vcxproj">
+      <Project>{53485509-5B62-36A1-BA9B-1ED07CAB84A4}</Project>
+      <Name>test-ext_matrix_uint4x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_matrix_uint4x4_sized.vcxproj">
+      <Project>{AB296F68-1A81-3A87-9ACD-994E0BCAD370}</Project>
+      <Name>test-ext_matrix_uint4x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_common.vcxproj">
+      <Project>{B3D0ABB2-5011-3316-A831-5BBB800A0DD8}</Project>
+      <Name>test-ext_quaternion_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_exponential.vcxproj">
+      <Project>{5D8CB7DC-6FE4-32A0-A165-70D13E690ED1}</Project>
+      <Name>test-ext_quaternion_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_geometric.vcxproj">
+      <Project>{C793B5D1-D0C4-3CD9-AD4F-23D9C5D6A84C}</Project>
+      <Name>test-ext_quaternion_geometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_relational.vcxproj">
+      <Project>{988063E1-7515-30AE-A7F2-896B8CE41653}</Project>
+      <Name>test-ext_quaternion_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_transform.vcxproj">
+      <Project>{7BA6DEB1-A916-3A17-8B9A-EB3F45B6A568}</Project>
+      <Name>test-ext_quaternion_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_trigonometric.vcxproj">
+      <Project>{F35C9BA7-C71B-3357-B033-97763665CDB7}</Project>
+      <Name>test-ext_quaternion_trigonometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_quaternion_type.vcxproj">
+      <Project>{95B2A666-6F7C-328E-8164-3909A2A6CB55}</Project>
+      <Name>test-ext_quaternion_type</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_common.vcxproj">
+      <Project>{EC0155E3-0C1D-3B7E-9A81-20C4A188B7D1}</Project>
+      <Name>test-ext_scalar_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_constants.vcxproj">
+      <Project>{6E6C84F6-D83F-3CCB-99A2-18E78820DAB3}</Project>
+      <Name>test-ext_scalar_constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_int_sized.vcxproj">
+      <Project>{6902F4C0-43B1-34DE-B1EE-C0835C2EA3D8}</Project>
+      <Name>test-ext_scalar_int_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_integer.vcxproj">
+      <Project>{D249007B-876A-31D0-8E10-8EA5D6725C72}</Project>
+      <Name>test-ext_scalar_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_relational.vcxproj">
+      <Project>{E21564B7-1CD7-3AF7-9892-2D0450DC992F}</Project>
+      <Name>test-ext_scalar_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_uint_sized.vcxproj">
+      <Project>{473742A1-617C-3F09-9A46-E515CBE4F754}</Project>
+      <Name>test-ext_scalar_uint_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_scalar_ulp.vcxproj">
+      <Project>{EBB8FD2B-14A0-3366-910B-28915BAB03B7}</Project>
+      <Name>test-ext_scalar_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vec1.vcxproj">
+      <Project>{CFD0C829-CA80-34C6-9849-5B3F79829D74}</Project>
+      <Name>test-ext_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_bool1.vcxproj">
+      <Project>{58DF1280-FD40-38C9-A40C-B25CD916615B}</Project>
+      <Name>test-ext_vector_bool1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_common.vcxproj">
+      <Project>{E3527883-D67E-3EE1-BFF0-CE8A6E4953C6}</Project>
+      <Name>test-ext_vector_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_iec559.vcxproj">
+      <Project>{6D78C662-548A-3837-BFD9-AF1B9C54B63B}</Project>
+      <Name>test-ext_vector_iec559</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_int1_sized.vcxproj">
+      <Project>{D9FADFA8-0FCC-3A8F-B4E5-E9373E83177D}</Project>
+      <Name>test-ext_vector_int1_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_int2_sized.vcxproj">
+      <Project>{EA0102BF-CC24-347F-9ABD-FD7A477AEE6D}</Project>
+      <Name>test-ext_vector_int2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_int3_sized.vcxproj">
+      <Project>{EDBBEF63-D9CB-355F-A904-979EA0C0C3E3}</Project>
+      <Name>test-ext_vector_int3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_int4_sized.vcxproj">
+      <Project>{9C13D726-17EB-3B61-84BA-177F454D85A8}</Project>
+      <Name>test-ext_vector_int4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_integer.vcxproj">
+      <Project>{1EEBE37D-DA0E-3334-AEED-9240B1DAB04F}</Project>
+      <Name>test-ext_vector_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_integer_sized.vcxproj">
+      <Project>{B13498AD-527D-37C4-B3CD-64E95CC71470}</Project>
+      <Name>test-ext_vector_integer_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_relational.vcxproj">
+      <Project>{15F7F9CA-88C5-3417-B6D6-36FF19301B00}</Project>
+      <Name>test-ext_vector_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_uint1_sized.vcxproj">
+      <Project>{737EB84E-5265-32F7-838E-C0D15E096C42}</Project>
+      <Name>test-ext_vector_uint1_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_uint2_sized.vcxproj">
+      <Project>{F45D34BF-9617-3EEE-8440-A8B65656D062}</Project>
+      <Name>test-ext_vector_uint2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_uint3_sized.vcxproj">
+      <Project>{3B98A976-34D9-30D7-A82D-6D40B5F00F55}</Project>
+      <Name>test-ext_vector_uint3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_uint4_sized.vcxproj">
+      <Project>{72760BA3-D8AE-3D0B-B1BB-9DD5D71CCAD9}</Project>
+      <Name>test-ext_vector_uint4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\ext\test-ext_vector_ulp.vcxproj">
+      <Project>{EA4D68D6-AB55-3E8F-858D-278004C73D9E}</Project>
+      <Name>test-ext_vector_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_bitfield.vcxproj">
+      <Project>{B225F306-F4ED-3450-A064-61A6C29A4C75}</Project>
+      <Name>test-gtc_bitfield</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_color_space.vcxproj">
+      <Project>{8A25E6F6-A8A0-3172-957B-FEE88D87352D}</Project>
+      <Name>test-gtc_color_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_constants.vcxproj">
+      <Project>{AD79FA41-94DF-3100-AADB-476B9F35EB93}</Project>
+      <Name>test-gtc_constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_epsilon.vcxproj">
+      <Project>{A45BEDCD-630D-3C3E-A78F-66C812988806}</Project>
+      <Name>test-gtc_epsilon</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_integer.vcxproj">
+      <Project>{7DACBFAD-F05A-3C19-A050-E1C94E89BC79}</Project>
+      <Name>test-gtc_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_matrix_access.vcxproj">
+      <Project>{3BA05D32-A20E-3D59-966E-872169EA3C32}</Project>
+      <Name>test-gtc_matrix_access</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_matrix_integer.vcxproj">
+      <Project>{5E1BA134-2690-35E0-84D3-F5C4594AF187}</Project>
+      <Name>test-gtc_matrix_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_matrix_inverse.vcxproj">
+      <Project>{1B1A5732-AD65-33AE-B459-443337A55B79}</Project>
+      <Name>test-gtc_matrix_inverse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_matrix_transform.vcxproj">
+      <Project>{2D6F5D6C-7606-3C3D-8B2F-470426C711E3}</Project>
+      <Name>test-gtc_matrix_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_noise.vcxproj">
+      <Project>{258D4DDD-C893-3BD8-BC0D-DAFE172EEE67}</Project>
+      <Name>test-gtc_noise</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_packing.vcxproj">
+      <Project>{1177A63C-3B92-3935-A81F-E811525AA7A6}</Project>
+      <Name>test-gtc_packing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_quaternion.vcxproj">
+      <Project>{DD32CADD-E402-38C3-AC6B-F32AAD5DC079}</Project>
+      <Name>test-gtc_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_random.vcxproj">
+      <Project>{A792BDC8-33BE-3162-8FE7-02A5C7B01BC4}</Project>
+      <Name>test-gtc_random</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_reciprocal.vcxproj">
+      <Project>{1CCC3BFB-6C08-3BC1-A05A-88741E954403}</Project>
+      <Name>test-gtc_reciprocal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_round.vcxproj">
+      <Project>{1709D1DF-14A1-308D-9162-C5348152F2CA}</Project>
+      <Name>test-gtc_round</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_type_aligned.vcxproj">
+      <Project>{A7033106-8D7B-3612-8186-F88F5AA364EA}</Project>
+      <Name>test-gtc_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_type_precision.vcxproj">
+      <Project>{B92BABCB-7694-344B-B394-85C12E7F95CB}</Project>
+      <Name>test-gtc_type_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_type_ptr.vcxproj">
+      <Project>{088B4484-CC18-3023-901F-7B4AEC51A74B}</Project>
+      <Name>test-gtc_type_ptr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_ulp.vcxproj">
+      <Project>{9129352C-60B8-3BD6-BB1E-D2E4F978AF60}</Project>
+      <Name>test-gtc_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtc\test-gtc_vec1.vcxproj">
+      <Project>{181585E3-B1D6-3348-9C30-A8E55F03CCAC}</Project>
+      <Name>test-gtc_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx.vcxproj">
+      <Project>{DDB6BEED-E983-3E62-BA83-37A99DCE8625}</Project>
+      <Name>test-gtx</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_associated_min_max.vcxproj">
+      <Project>{248D419B-ABA3-3AB9-B2BD-BBBCC41B7D39}</Project>
+      <Name>test-gtx_associated_min_max</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_closest_point.vcxproj">
+      <Project>{70FDDE51-6353-3F1D-9DE2-4273639EC9F4}</Project>
+      <Name>test-gtx_closest_point</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_color_encoding.vcxproj">
+      <Project>{5162B819-31CA-3137-BBF0-41C9E9046DFE}</Project>
+      <Name>test-gtx_color_encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_color_space.vcxproj">
+      <Project>{D89C3884-5E87-3D93-B801-88CAF9D9813B}</Project>
+      <Name>test-gtx_color_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_color_space_YCoCg.vcxproj">
+      <Project>{C8574CCD-CC2E-38A6-80CE-ADFB0011895A}</Project>
+      <Name>test-gtx_color_space_YCoCg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_common.vcxproj">
+      <Project>{060346C3-515C-3FAD-AB6A-83A8278F7CAF}</Project>
+      <Name>test-gtx_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_compatibility.vcxproj">
+      <Project>{275DA1DC-3170-3B35-93DE-28FE26BB3988}</Project>
+      <Name>test-gtx_compatibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_component_wise.vcxproj">
+      <Project>{4FC0A759-F3BB-3B56-9927-B06D3DB602C7}</Project>
+      <Name>test-gtx_component_wise</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_dual_quaternion.vcxproj">
+      <Project>{4E19B843-6F0B-3D11-A06A-260FC5B63332}</Project>
+      <Name>test-gtx_dual_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_easing.vcxproj">
+      <Project>{12E42F93-A3F1-31B3-AF51-F90757A84F41}</Project>
+      <Name>test-gtx_easing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_euler_angle.vcxproj">
+      <Project>{E5F3861A-4D07-3457-83A3-B019541D3403}</Project>
+      <Name>test-gtx_euler_angle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_extend.vcxproj">
+      <Project>{31F76A55-11D1-3926-9836-9620C34D2FFF}</Project>
+      <Name>test-gtx_extend</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_extended_min_max.vcxproj">
+      <Project>{B4655229-F637-3DEF-B0FF-78F6ADFDFFCB}</Project>
+      <Name>test-gtx_extended_min_max</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_exterior_product.vcxproj">
+      <Project>{3B2F209B-0727-3A61-A52B-E124869D01C2}</Project>
+      <Name>test-gtx_exterior_product</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_fast_exponential.vcxproj">
+      <Project>{2BF9E013-9A05-3A56-8EDC-E2844F910712}</Project>
+      <Name>test-gtx_fast_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_fast_square_root.vcxproj">
+      <Project>{62065D4D-289C-311B-9142-63FCFFAA8853}</Project>
+      <Name>test-gtx_fast_square_root</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_fast_trigonometry.vcxproj">
+      <Project>{F6AA3648-7F69-3D28-A530-9ECD90302635}</Project>
+      <Name>test-gtx_fast_trigonometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_functions.vcxproj">
+      <Project>{90966C76-C534-3D86-9595-932DD16EB97A}</Project>
+      <Name>test-gtx_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_gradient_paint.vcxproj">
+      <Project>{36EA8EB7-A56A-33F6-8573-C9112AAE0489}</Project>
+      <Name>test-gtx_gradient_paint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_handed_coordinate_space.vcxproj">
+      <Project>{FF1F29D7-FF10-3ACF-9955-B9CB9830BE62}</Project>
+      <Name>test-gtx_handed_coordinate_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_integer.vcxproj">
+      <Project>{443AA796-B991-3436-9857-EC1F0A830302}</Project>
+      <Name>test-gtx_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_intersect.vcxproj">
+      <Project>{682B465B-EF24-36FB-9E69-29C2EDA687D8}</Project>
+      <Name>test-gtx_intersect</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_io.vcxproj">
+      <Project>{3C522E44-F13E-399C-A35A-4A5755C7E53D}</Project>
+      <Name>test-gtx_io</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_load.vcxproj">
+      <Project>{9EB5AA56-72A4-3924-BBE4-DBF822484F67}</Project>
+      <Name>test-gtx_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_log_base.vcxproj">
+      <Project>{6744C8AA-60A0-3F58-B5A1-0DACEBDB582A}</Project>
+      <Name>test-gtx_log_base</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_cross_product.vcxproj">
+      <Project>{30C4918E-B616-3DE5-879D-D87A43AE926E}</Project>
+      <Name>test-gtx_matrix_cross_product</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_decompose.vcxproj">
+      <Project>{B0E6C14F-53DF-340F-8937-ABBEF2012C3F}</Project>
+      <Name>test-gtx_matrix_decompose</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_factorisation.vcxproj">
+      <Project>{930B6E6A-0054-3399-AB7B-6823C20FD266}</Project>
+      <Name>test-gtx_matrix_factorisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_interpolation.vcxproj">
+      <Project>{BAB65E70-9FB8-3C2C-9EFC-E932CD297732}</Project>
+      <Name>test-gtx_matrix_interpolation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_major_storage.vcxproj">
+      <Project>{0F7FDED3-B20D-36E5-B7B8-9CE63CF6BC7F}</Project>
+      <Name>test-gtx_matrix_major_storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_operation.vcxproj">
+      <Project>{C120142B-56CF-3521-833A-B4900CE35AA0}</Project>
+      <Name>test-gtx_matrix_operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_query.vcxproj">
+      <Project>{28078288-7C01-31D2-A383-8016D7F01062}</Project>
+      <Name>test-gtx_matrix_query</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_matrix_transform_2d.vcxproj">
+      <Project>{F5BB1016-4A39-3C3D-926C-699CF0F7E458}</Project>
+      <Name>test-gtx_matrix_transform_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_norm.vcxproj">
+      <Project>{B9A353A9-7503-3AAD-A394-1BBC9DA1A99A}</Project>
+      <Name>test-gtx_norm</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_normal.vcxproj">
+      <Project>{EA60506B-8855-3FC7-9E25-FFC625B16515}</Project>
+      <Name>test-gtx_normal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_normalize_dot.vcxproj">
+      <Project>{D21576AA-261B-3438-B47C-79D38B1FD14F}</Project>
+      <Name>test-gtx_normalize_dot</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_number_precision.vcxproj">
+      <Project>{9D267C07-6A71-3D10-9DC3-85B5C4454AA3}</Project>
+      <Name>test-gtx_number_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_optimum_pow.vcxproj">
+      <Project>{E0F1C506-07FF-38AA-AB83-A3FDFE349DA6}</Project>
+      <Name>test-gtx_optimum_pow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_orthonormalize.vcxproj">
+      <Project>{8D1F89E9-C641-307E-9D29-387F5AB1CC90}</Project>
+      <Name>test-gtx_orthonormalize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_perpendicular.vcxproj">
+      <Project>{006DA5DA-ED63-3C6A-8343-286917532D7A}</Project>
+      <Name>test-gtx_perpendicular</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_polar_coordinates.vcxproj">
+      <Project>{FD45C507-FEE0-363A-AE29-9B34E699CEEC}</Project>
+      <Name>test-gtx_polar_coordinates</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_projection.vcxproj">
+      <Project>{C84AD9DB-50F2-3AC3-B23F-F0056F19F022}</Project>
+      <Name>test-gtx_projection</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_quaternion.vcxproj">
+      <Project>{A678604A-DD51-3755-9BF8-875FAAFF5E9B}</Project>
+      <Name>test-gtx_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_range.vcxproj">
+      <Project>{B0A8B1D6-21AE-38B3-8883-36A080B81D21}</Project>
+      <Name>test-gtx_range</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_rotate_normalized_axis.vcxproj">
+      <Project>{7EE69EB1-DF11-34B8-A02D-E8D653A1DBA2}</Project>
+      <Name>test-gtx_rotate_normalized_axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_rotate_vector.vcxproj">
+      <Project>{73B24C86-EDEA-3A30-84EB-948BB2A47444}</Project>
+      <Name>test-gtx_rotate_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_scalar_multiplication.vcxproj">
+      <Project>{852EC51B-70FE-3EDB-A046-42670A92A276}</Project>
+      <Name>test-gtx_scalar_multiplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_scalar_relational.vcxproj">
+      <Project>{C10FBE68-2A94-34F8-A8B7-D59BFEB2BD6C}</Project>
+      <Name>test-gtx_scalar_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_spline.vcxproj">
+      <Project>{B79D5AD0-14E5-3D06-9E2A-D9673735216E}</Project>
+      <Name>test-gtx_spline</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_string_cast.vcxproj">
+      <Project>{6668B281-98BC-3AE2-AAED-01563B9C739F}</Project>
+      <Name>test-gtx_string_cast</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_texture.vcxproj">
+      <Project>{85D13EE1-F5E9-3C03-B165-0FC5F121EDBB}</Project>
+      <Name>test-gtx_texture</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_type_aligned.vcxproj">
+      <Project>{24BD675B-5166-3BD8-8806-56FD5CF7264B}</Project>
+      <Name>test-gtx_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_type_trait.vcxproj">
+      <Project>{B58518E6-8E1B-31EF-89E5-64E7A72E4093}</Project>
+      <Name>test-gtx_type_trait</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_vec_swizzle.vcxproj">
+      <Project>{7535DC8B-8BE1-373C-A872-B6A6A79EA83E}</Project>
+      <Name>test-gtx_vec_swizzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_vector_angle.vcxproj">
+      <Project>{B39B42B9-2D69-3E57-9061-38FB3C656E7F}</Project>
+      <Name>test-gtx_vector_angle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_vector_query.vcxproj">
+      <Project>{1ACC4C90-91B0-36F5-A589-7BE05578E095}</Project>
+      <Name>test-gtx_vector_query</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\gtx\test-gtx_wrap.vcxproj">
+      <Project>{80659697-B766-3F07-B1C2-6AF635D7056D}</Project>
+      <Name>test-gtx_wrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_matrix_div.vcxproj">
+      <Project>{C7ED89AC-858A-335C-9B20-2DB8A977A22E}</Project>
+      <Name>test-perf_matrix_div</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_matrix_inverse.vcxproj">
+      <Project>{5350453E-6B77-3346-805A-6CBDCB42C201}</Project>
+      <Name>test-perf_matrix_inverse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_matrix_mul.vcxproj">
+      <Project>{AF7EC7EE-0AFC-347C-BCBF-42D654B8E4C3}</Project>
+      <Name>test-perf_matrix_mul</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_matrix_mul_vector.vcxproj">
+      <Project>{47B5DC78-7AC7-3EB4-9FFE-BD1198683E90}</Project>
+      <Name>test-perf_matrix_mul_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_matrix_transpose.vcxproj">
+      <Project>{2A8CB701-A399-3D3A-B67E-B456AB193AF9}</Project>
+      <Name>test-perf_matrix_transpose</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\shiro\rep\stPr\battle-city\external\glm\test\perf\test-perf_vector_mul_matrix.vcxproj">
+      <Project>{C7FF1EAF-5193-3807-B908-6CCE4B2A6EFF}</Project>
+      <Name>test-perf_vector_mul_matrix</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

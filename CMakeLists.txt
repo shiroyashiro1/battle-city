@@ -9,11 +9,14 @@ project(${PROJECT_NAME})
 add_executable(${PROJECT_NAME} src/main.cpp 
 	src/Render/ShaderProgram.cpp
 	src/Render/ShaderProgram.h
+	src/Render/Texture2D.cpp
+	src/Render/Texture2D.h
+	src/Render/Sprite.cpp
+	src/Render/Sprite.h
+
 	src/Resources/ResourceManager.cpp
 	src/Resources/ResourceManager.h
 	src/Resources/stb_image.h
-	src/Render/Texture2D.cpp
-	src/Render/Texture2D.h
 	)
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
@@ -29,6 +32,9 @@ target_link_libraries(${PROJECT_NAME} glfw)
 # Linking GLAD
 add_subdirectory(external/glad/)
 target_link_libraries(${PROJECT_NAME} glad)
+
+# Add an ability to include glm library
+include_directories(external/glm/)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 

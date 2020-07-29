@@ -1,4 +1,5 @@
 #pragma once
+#include <glm/mat4x4.hpp>
 #include <string>
 #include <iostream>
 #include <glad/glad.h>
@@ -19,6 +20,7 @@ namespace Renderer
 		ShaderProgram& operator=(ShaderProgram&& shaderProgram) noexcept;
 		ShaderProgram(ShaderProgram&& shaderProgram) noexcept;
 		void setInt(const std::string& name, const GLint value);
+		void setMatrix4(const std::string& name, const glm::mat4& matrix);
 
 		~ShaderProgram();
 
