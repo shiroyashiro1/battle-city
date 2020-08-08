@@ -21,6 +21,7 @@ namespace Renderer
 		Sprite& operator=(const Sprite&) = delete;
 
 		Sprite(const std::shared_ptr<Texture2D> pTexture, 
+			const std::string initialSubTexture,
 			const std::shared_ptr<ShaderProgram> pShaderProgram,
 			const glm::vec2& position = glm::vec2(0.f), 
 			const glm::vec2& size = glm::vec2(1.f),
@@ -29,7 +30,7 @@ namespace Renderer
 		~Sprite();
 
 		void render() const;
-		void setPostion(const glm::vec2& position);
+		void setPosition(const glm::vec2& position);
 		void setSize(const glm::vec2& size);
 		void setRotation(const float rotation);
 

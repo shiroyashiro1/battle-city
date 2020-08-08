@@ -179,10 +179,29 @@ int main(int argc, char** argv)
             return -1;
         }
 
-        auto pSprite = resourceManager.loadSprite(
-            "NewSprite", "DefaultTexture", "SpriteShader", 100, 100);
+        /*auto pSprite = resourceManager.loadSprite(
+            "NewSprite", "DefaultTexture", "SpriteShader", 100, 100);*/
 
-        pSprite->setPostion(glm::vec2(300, 100));
+        std::vector<std::string> subTexturesNames = 
+        { 
+            "block", 
+            "topBlock", 
+            "bottomBlock", 
+            "leftBlock", 
+            "rightBlock", 
+            "topLeftBlock", 
+            "topRightBlock", 
+            "bottomLeftBlock", 
+            "bottomRightBlock", 
+            "beton" 
+        };
+
+        auto pTextureAtlas = resourceManager.loadTextureAtlas("DefaultTextureAtlas", 
+            "res/textures/map_16x16.png", std::move(subTexturesNames), 16, 16);
+
+        auto pSprite = resourceManager.loadSprite("NewSprite", 
+            "DefaultTextureAtlas", "SpriteShader", g_windowSize.x, g_windowSize.y, "beton");
+        pSprite->setPosition(glm::vec2(0, 0));
 
         /* SEND TO VIDEO-CARD MEMORY SHADERS INFO ABOUT
            POSITIONS AND COLORS OUR VERTEX
